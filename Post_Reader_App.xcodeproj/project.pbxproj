@@ -35,6 +35,10 @@
 		92B4B3B72ABC3E8C0084AA46 /* PostDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3B62ABC3E8C0084AA46 /* PostDataRepository.swift */; };
 		92B4B3B92ABC3E9E0084AA46 /* CDPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3B82ABC3E9E0084AA46 /* CDPost.swift */; };
 		92B4B3BD2ABC3F800084AA46 /* UserPost+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3BB2ABC3F800084AA46 /* UserPost+CoreDataProperties.swift */; };
+		92B4B3BF2ABC6AA90084AA46 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3BE2ABC6AA90084AA46 /* UserDetailsViewModel.swift */; };
+		92B4B3C12ABC6AF80084AA46 /* UserDetailsViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3C02ABC6AF80084AA46 /* UserDetailsViewController + UI.swift */; };
+		92B4B3C32ABC6B080084AA46 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3C22ABC6B080084AA46 /* UserDetailsViewController.swift */; };
+		92B4B3C52ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3C42ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift */; };
 		E817D349B6544A73C2E65448 /* Pods_Post_Reader_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEF4751D47338B32E0DBA20 /* Pods_Post_Reader_AppTests.framework */; };
 		EFBAB42B68C4A95CD353831A /* Pods_Post_Reader_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDB53C9F970C509DF974AB9 /* Pods_Post_Reader_App.framework */; };
 /* End PBXBuildFile section */
@@ -94,6 +98,10 @@
 		92B4B3B62ABC3E8C0084AA46 /* PostDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataRepository.swift; sourceTree = "<group>"; };
 		92B4B3B82ABC3E9E0084AA46 /* CDPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPost.swift; sourceTree = "<group>"; };
 		92B4B3BB2ABC3F800084AA46 /* UserPost+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserPost+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		92B4B3BE2ABC6AA90084AA46 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		92B4B3C02ABC6AF80084AA46 /* UserDetailsViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetailsViewController + UI.swift"; sourceTree = "<group>"; };
+		92B4B3C22ABC6B080084AA46 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		92B4B3C42ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetailsViewController + Tableview.swift"; sourceTree = "<group>"; };
 		CA2EB3A3C1D1D7058D21A610 /* Pods_Post_Reader_App_Post_Reader_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Post_Reader_App_Post_Reader_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F0513286E6B665BCB6CC9F /* Pods-Post_Reader_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post_Reader_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Post_Reader_AppTests/Pods-Post_Reader_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E50ADF2B2862F728D5252A32 /* Pods-Post_Reader_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post_Reader_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Post_Reader_AppTests/Pods-Post_Reader_AppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -264,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				92B4B3AC2ABC256A0084AA46 /* PostsViewModel.swift */,
+				92B4B3BE2ABC6AA90084AA46 /* UserDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -303,6 +312,9 @@
 		92B4B39B2ABC161A0084AA46 /* User Details */ = {
 			isa = PBXGroup;
 			children = (
+				92B4B3C22ABC6B080084AA46 /* UserDetailsViewController.swift */,
+				92B4B3C02ABC6AF80084AA46 /* UserDetailsViewController + UI.swift */,
+				92B4B3C42ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift */,
 			);
 			path = "User Details";
 			sourceTree = "<group>";
@@ -588,10 +600,13 @@
 				92B4B3A62ABC240E0084AA46 /* PostModel.swift in Sources */,
 				92B4B3AF2ABC3C7D0084AA46 /* PostViewController + Tableview.swift in Sources */,
 				92B4B3A42ABC23E00084AA46 /* URLConstant.swift in Sources */,
+				92B4B3BF2ABC6AA90084AA46 /* UserDetailsViewModel.swift in Sources */,
 				92B4B3602ABC14860084AA46 /* Post_Reader_App.xcdatamodeld in Sources */,
+				92B4B3C32ABC6B080084AA46 /* UserDetailsViewController.swift in Sources */,
 				92B4B3AB2ABC250E0084AA46 /* APIHandler.swift in Sources */,
 				92B4B3B92ABC3E9E0084AA46 /* CDPost.swift in Sources */,
 				92B4B3562ABC14860084AA46 /* AppDelegate.swift in Sources */,
+				92B4B3C52ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift in Sources */,
 				92B4B3B72ABC3E8C0084AA46 /* PostDataRepository.swift in Sources */,
 				92B4B3582ABC14860084AA46 /* SceneDelegate.swift in Sources */,
 				92B4B3A02ABC23960084AA46 /* UITableview.swift in Sources */,
@@ -599,6 +614,7 @@
 				92B4B3A82ABC243A0084AA46 /* UserDetailsModel.swift in Sources */,
 				92B4B3B52ABC3E790084AA46 /* PersistenceStorage.swift in Sources */,
 				92B4B3BD2ABC3F800084AA46 /* UserPost+CoreDataProperties.swift in Sources */,
+				92B4B3C12ABC6AF80084AA46 /* UserDetailsViewController + UI.swift in Sources */,
 				92B4B3972ABC15BE0084AA46 /* UserDetailsTableViewCell.swift in Sources */,
 				92B4B3932ABC15A50084AA46 /* PostsTableViewCell.swift in Sources */,
 			);

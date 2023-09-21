@@ -11,8 +11,9 @@ class PostViewController: UIViewController {
     @IBOutlet weak var postTableview: UITableView!
     
     var postViewModel = PostsViewModel()
-    
-    
+    var currentPage = 1
+    var totalPages = 1
+    let refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

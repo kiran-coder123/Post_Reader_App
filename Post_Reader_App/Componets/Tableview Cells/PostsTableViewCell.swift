@@ -47,9 +47,6 @@ class PostsTableViewCell: UITableViewCell {
                     
                //   self.userProfileImageview.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
                      self.userProfileImageview.image = image
-                      
-                    //  self.userProfileImageview.sd_setImage(with: URL(string: "https://xsgames.co/randomusers/avatar.php?g=male"), placeholderImage: UIImage(named: "placeholder.png"))
-
                   }
               }
           }.resume()
