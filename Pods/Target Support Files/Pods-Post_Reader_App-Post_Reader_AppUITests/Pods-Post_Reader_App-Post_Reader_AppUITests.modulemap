@@ -1,0 +1,6 @@
+framework module Pods_Post_Reader_App_Post_Reader_AppUITests {
+  umbrella header "Pods-Post_Reader_App-Post_Reader_AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
