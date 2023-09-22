@@ -10,17 +10,17 @@ Second Screen - Post Detail
 Seamless navigation between screens
 
 **Requirements**
-1.iOS 12.0 or later
-2.Xcode 11 or later
-3.Swift 5
+1. iOS 12.0 or later
+2. Xcode 11 or later
+3. Swift 5
 
 **Installation**
 
 1. Clone or download this repository.
 2. Open the project in Xcode.
 3. Build and run the app on a simulator or a physical device.
+   
 **Usage**
-
 1. Launch the app on your iOS device or simulator.
 2. You will be presented with the first screen of the Posts.
 3. click any particular post you will redirect to next screen which show details of posts.
