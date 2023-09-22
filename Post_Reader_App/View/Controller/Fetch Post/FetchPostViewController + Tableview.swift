@@ -19,8 +19,8 @@ extension FetchPostsViewController: UITableViewDataSource {
         guard let cell = fetchDataTableview.dequeReusableCell(PostsTableViewCell.self) else {return UITableViewCell()}
         let post = postsData[indexPath.row]
         cell.userProfileImageview.isHidden = true
-        cell.userIdLabel.text = "\(post.userId)"
-         cell.idLabel.text = "\(post.id)"
+        cell.userIdLabel.text = "UserID: \t \(post.userId)"
+         cell.idLabel.text = "ID: \t \(post.id)"
         cell.titleLabel.text = "Title: \t \(post.title ?? " ")"
         cell.bodyLabel.text = "Body: \t \(post.body ?? " ")"
         return cell

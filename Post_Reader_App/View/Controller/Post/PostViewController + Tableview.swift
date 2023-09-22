@@ -39,9 +39,18 @@ extension PostViewController: UITableViewDataSource {
     
   
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == postViewModel.posts.count - 1, currentPage < totalPages {
-            self.loadData()
-        }
+   if indexPath.row == postViewModel.posts.count - 1, currentPage < totalPages {
+               let pageToLoad = currentPage + 1 // Assuming currentPage is a property tracking the current page
+               postViewModel.fetchPosts(page: pageToLoad, limit: 10) { [weak self] newPosts in
+                   guard let newPosts = newPosts else { return }
+                   self?.postViewModel.posts.append(contentsOf: newPosts)
+                   self?.currentPage += 1
+                   self?.totalPages = 100 // Calculate the total number of pages based on your data
+                   self?.postTableview.reloadData()
+               }
+           }
+        
+        
     }
     
     

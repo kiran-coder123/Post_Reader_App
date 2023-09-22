@@ -10,7 +10,6 @@ extension PostViewController {
     
     func setupUI() {
         setupTableviewCell()
-        setupPagination()
     }
     func setupTableviewCell(){
         postTableview.register(PostsTableViewCell.self)
@@ -24,17 +23,4 @@ extension PostViewController {
         postTableview.showsVerticalScrollIndicator = false
         postTableview.allowsSelection = true
     }
-    
-    func setupPagination() {
-       
-        refreshControl.addTarget(self, action: #selector(loadData), for: .valueChanged)
-        postTableview.refreshControl = refreshControl
-    }
-    @objc func loadData() {
-        // Make network call to fetch data for currentPage
-        currentPage += 1
-        refreshControl.endRefreshing()
-    }
-    
-    
 }

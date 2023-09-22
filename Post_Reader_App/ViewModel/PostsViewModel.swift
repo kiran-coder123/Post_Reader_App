@@ -10,9 +10,9 @@ import UIKit
 class PostsViewModel: NSObject {
     
     var posts: [PostModel] = []
-    private let apiHandler = APIHandler()  
+      let apiHandler = APIHandler()  
     private let postDataRepository: PostDataRepository = PostDataRepository()
-    func fetchPosts(completion: @escaping ([PostModel]?) -> Void) {
+    func fetchPosts(page: Int, limit: Int, completion: @escaping ([PostModel]?) -> Void) {
         guard let url = URLConstant.postUrl else {
             completion(nil)
             return
@@ -32,12 +32,15 @@ class PostsViewModel: NSObject {
 
     func getPostsRecord(completionHander: @escaping(_ result: Array<PostModel>?) -> Void ){
         postDataRepository.getPostsRecords { response in
+            
+            
+            
             if(response != nil && response?.count != 0) {
                 // return response to the view controller
                 completionHander(response)
             } else {
                 // call API
-                self.fetchPosts { response in
+                self.fetchPosts(page: 1, limit: 10) { response in
                     if (response != nil && response?.count != 0) {
                         // insert record in core data
                        _ =  self.postDataRepository.insertPostsRecords(records: response ?? [])
