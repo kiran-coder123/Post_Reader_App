@@ -12,7 +12,8 @@ Seamless navigation between screens
 
 
 **Screenshots**
-![Uploading MergedImages (1).png…]()
+![Screenshots](https://github.com/kiran-coder123/Post_Reader_App/assets/55736093/7555cbc8-965d-4a00-bd54-ff5b5d05d68b)
+ 
 
 **Requirements**
 1. iOS 12.0 or later
