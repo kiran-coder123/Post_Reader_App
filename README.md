@@ -10,6 +10,10 @@ Second Screen - Post Detail
 ● Email: User Email, on click it will open email app with prefill email address. ● Mobile: User Mobile, on click it will call to the User. ● Address: User Address information along with Zip Code, on click it will open Google Map or Default browser and display user location. ● Company: User Company Name ● Website: User website, on click it will open user Website.
 Seamless navigation between screens
 
+
+**Screenshots**
+![Uploading MergedImages (1).png…]()
+
 **Requirements**
 1. iOS 12.0 or later
 2. Xcode 11 or later
