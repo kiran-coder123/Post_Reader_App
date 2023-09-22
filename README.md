@@ -3,6 +3,7 @@
 This project demonstrates a two-screen post reader app form implementation using Swift.
 
 **Features**
+
 First Screen - Post List
 ● User ID ● ID ● Title ● Body
 Second Screen - Post Detail
