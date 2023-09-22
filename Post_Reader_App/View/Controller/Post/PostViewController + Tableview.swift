@@ -15,7 +15,7 @@ extension PostViewController: UITableViewDelegate {
 //MARK: Postviewcontroller Datasource Method
 extension PostViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postViewModel.posts.count
+      return postViewModel.posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

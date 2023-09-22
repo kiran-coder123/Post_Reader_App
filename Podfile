@@ -7,7 +7,7 @@ target 'Post_Reader_App' do
 
   # Pods for Post_Reader_App
    pod 'SDWebImage'
-
+   pod 'Kingfisher'
   target 'Post_Reader_AppTests' do
     inherit! :search_paths
     # Pods for testing

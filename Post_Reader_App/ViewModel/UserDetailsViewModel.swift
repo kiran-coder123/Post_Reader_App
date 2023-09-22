@@ -7,38 +7,26 @@
 
 import Foundation
 class UserDetailsViewModel {
-    
+    private let apiHandler = APIHandler()
     var userDetails: UserDetailsModel!
     var users: [UserDetailsModel] = []
     
     func fetchUserDetails(user_Id: Int, completion: @escaping (UserDetailsModel?) -> Void) {
-       // let urlString = "\(String(describing: URLConstant.userDetailsUrl))\(user_Id)"
-       
-       let urlString = "https://jsonplaceholder.typicode.com/users/\(user_Id)"
+        let urlString = "https://jsonplaceholder.typicode.com/users/\(user_Id)"
         
         guard let url = URL(string: urlString)  else {
-                   completion(nil)
-                   return
-               }
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-                   if let error = error {
-                       print("Error fetching products: \(error)")
-                       completion(nil)
-                       return
-                   }
-                   
-                   if let data = data {
-                       let decoder = JSONDecoder()
-                       do {
-                           let users = try decoder.decode(UserDetailsModel.self, from: data)
-                           completion(users)
-                           
-                       } catch {
-                           print("Error decoding products: \(error)")
-                           completion(nil)
-                       }
-                   }
-               }.resume()
-           }
+            completion(nil)
+            return
+        }
+        apiHandler.fetch(url: url, responseType: UserDetailsModel.self) { result in
+            switch result {
+            case .success(let user):
+                completion(user)
+            case .failure(let error):
+                print("Error fetching posts: \(error)")
+                completion(nil)
+            }
+        }
+    }
     
 }

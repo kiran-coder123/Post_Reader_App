@@ -22,9 +22,9 @@ class UserDetailsViewController: UIViewController {
 
      }
     func fetchUserDetailsData(){
-        userDetailViewModel.fetchUserDetails(user_Id: user_Id) { users in
+        userDetailViewModel.fetchUserDetails(user_Id: user_Id) { user in
             
-            self.userDetailViewModel.userDetails = users
+            self.userDetailViewModel.userDetails = user
             
             DispatchQueue.main.async {
               //  print(users?.email ?? "no users")

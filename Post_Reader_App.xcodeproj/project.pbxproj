@@ -39,6 +39,9 @@
 		92B4B3C12ABC6AF80084AA46 /* UserDetailsViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3C02ABC6AF80084AA46 /* UserDetailsViewController + UI.swift */; };
 		92B4B3C32ABC6B080084AA46 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3C22ABC6B080084AA46 /* UserDetailsViewController.swift */; };
 		92B4B3C52ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B4B3C42ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift */; };
+		92C81DAD2ABD54B500CD4692 /* FetchPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C81DAC2ABD54B500CD4692 /* FetchPostsViewController.swift */; };
+		92C81DB02ABD56BF00CD4692 /* FetchPostViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C81DAF2ABD56BF00CD4692 /* FetchPostViewController + UI.swift */; };
+		92C81DB22ABD56CF00CD4692 /* FetchPostViewController + Tableview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C81DB12ABD56CF00CD4692 /* FetchPostViewController + Tableview.swift */; };
 		E817D349B6544A73C2E65448 /* Pods_Post_Reader_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DEF4751D47338B32E0DBA20 /* Pods_Post_Reader_AppTests.framework */; };
 		EFBAB42B68C4A95CD353831A /* Pods_Post_Reader_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CDB53C9F970C509DF974AB9 /* Pods_Post_Reader_App.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +105,9 @@
 		92B4B3C02ABC6AF80084AA46 /* UserDetailsViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetailsViewController + UI.swift"; sourceTree = "<group>"; };
 		92B4B3C22ABC6B080084AA46 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		92B4B3C42ABC6B280084AA46 /* UserDetailsViewController + Tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetailsViewController + Tableview.swift"; sourceTree = "<group>"; };
+		92C81DAC2ABD54B500CD4692 /* FetchPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPostsViewController.swift; sourceTree = "<group>"; };
+		92C81DAF2ABD56BF00CD4692 /* FetchPostViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchPostViewController + UI.swift"; sourceTree = "<group>"; };
+		92C81DB12ABD56CF00CD4692 /* FetchPostViewController + Tableview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchPostViewController + Tableview.swift"; sourceTree = "<group>"; };
 		CA2EB3A3C1D1D7058D21A610 /* Pods_Post_Reader_App_Post_Reader_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Post_Reader_App_Post_Reader_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F0513286E6B665BCB6CC9F /* Pods-Post_Reader_AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post_Reader_AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Post_Reader_AppTests/Pods-Post_Reader_AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E50ADF2B2862F728D5252A32 /* Pods-Post_Reader_AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Post_Reader_AppTests.release.xcconfig"; path = "Target Support Files/Pods-Post_Reader_AppTests/Pods-Post_Reader_AppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 				92B4B35B2ABC14860084AA46 /* Main.storyboard */,
 				92B4B39A2ABC16130084AA46 /* Post */,
 				92B4B39B2ABC161A0084AA46 /* User Details */,
+				92C81DAE2ABD54F400CD4692 /* Fetch Post */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +348,16 @@
 				92B4B3AA2ABC250E0084AA46 /* APIHandler.swift */,
 			);
 			path = "API Helper";
+			sourceTree = "<group>";
+		};
+		92C81DAE2ABD54F400CD4692 /* Fetch Post */ = {
+			isa = PBXGroup;
+			children = (
+				92C81DAC2ABD54B500CD4692 /* FetchPostsViewController.swift */,
+				92C81DAF2ABD56BF00CD4692 /* FetchPostViewController + UI.swift */,
+				92C81DB12ABD56CF00CD4692 /* FetchPostViewController + Tableview.swift */,
+			);
+			path = "Fetch Post";
 			sourceTree = "<group>";
 		};
 		FE5DB85FCD27E3A77627B63D /* Frameworks */ = {
@@ -597,7 +614,10 @@
 				92B4B3B12ABC3D700084AA46 /* PostViewController + UI.swift in Sources */,
 				92B4B3B32ABC3E670084AA46 /* PostRepository.swift in Sources */,
 				92B4B39D2ABC22E40084AA46 /* PostViewController.swift in Sources */,
+				92C81DB22ABD56CF00CD4692 /* FetchPostViewController + Tableview.swift in Sources */,
+				92C81DAD2ABD54B500CD4692 /* FetchPostsViewController.swift in Sources */,
 				92B4B3A62ABC240E0084AA46 /* PostModel.swift in Sources */,
+				92C81DB02ABD56BF00CD4692 /* FetchPostViewController + UI.swift in Sources */,
 				92B4B3AF2ABC3C7D0084AA46 /* PostViewController + Tableview.swift in Sources */,
 				92B4B3A42ABC23E00084AA46 /* URLConstant.swift in Sources */,
 				92B4B3BF2ABC6AA90084AA46 /* UserDetailsViewModel.swift in Sources */,

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var userProfileImageview: UIImageView!
@@ -39,8 +39,18 @@ class PostsTableViewCell: UITableViewCell {
     }
     
       func loadRandomImage() {
-          guard let url = URLConstant.userProfile else { return }
+        //  let url = URLConstant.userProfile
+        //  userProfileImageview.kf.setImage(with: url)
           
+          
+          
+          
+          
+          
+          guard let url = URLConstant.userProfile else { return }
+//          userProfileImageview.sd_setImage(with: url)
+//          
+//
           URLSession.shared.dataTask(with: url) { data, response, error in
               if let data = data, let image = UIImage(data: data) {
                   DispatchQueue.main.async {
@@ -50,6 +60,6 @@ class PostsTableViewCell: UITableViewCell {
                   }
               }
           }.resume()
-      }
+    }
     
 }

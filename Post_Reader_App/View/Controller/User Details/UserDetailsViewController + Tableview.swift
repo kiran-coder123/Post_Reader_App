@@ -26,7 +26,7 @@ extension UserDetailsViewController: UITableViewDataSource {
         cell.emailLabel.text = (userDetailViewModel.userDetails.email ?? " ")
         cell.companyLabel.text =  (userDetailViewModel.userDetails.company?.name ?? " ")
         cell.websitesLabel.text = (userDetailViewModel.userDetails.website ?? " ")
-        cell.addressLabel.text =  (userDetailViewModel.userDetails.address?.city)! + " ," + (userDetailViewModel.userDetails.address?.street)!
+        cell.addressLabel.text =  (userDetailViewModel.userDetails.address?.city)! + " ," + (userDetailViewModel.userDetails.address?.street)! 
          cell.phoneLabel.text = userDetailViewModel.userDetails.phone
         cell.locationLabel.text = "📍"
         cell.userDetailViewModel = userDetailViewModel

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Post View Controller-->
+        <!--Posts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PostViewController" customModule="Post_Reader_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="L2b-ym-R5M" secondAttribute="bottom" id="y6A-r0-cLk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="llQ-bS-FDi"/>
+                    <navigationItem key="navigationItem" title="Posts" id="llQ-bS-FDi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="tXx-Tj-7hk">
+                            <connections>
+                                <segue destination="US9-sV-lBb" kind="show" id="wTN-cX-nep"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="postTableview" destination="L2b-ym-R5M" id="fAE-5v-Gkk"/>
                         <segue destination="asz-kb-Olo" kind="show" identifier="UserDetailsTableViewCell" id="P19-oK-jtY"/>
@@ -43,6 +49,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="846.56488549618314" y="-2.1126760563380285"/>
+        </scene>
+        <!--Fetch Posts View Controller-->
+        <scene sceneID="alP-Yh-9tH">
+            <objects>
+                <viewController storyboardIdentifier="FetchPostsViewController" id="US9-sV-lBb" customClass="FetchPostsViewController" customModule="Post_Reader_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G09-J3-jOL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jdw-XO-I5N">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Isq-HH-oaG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jdw-XO-I5N" firstAttribute="bottom" secondItem="Isq-HH-oaG" secondAttribute="bottom" id="9l7-hq-j0m"/>
+                            <constraint firstItem="Jdw-XO-I5N" firstAttribute="top" secondItem="Isq-HH-oaG" secondAttribute="top" id="ajZ-6A-g6r"/>
+                            <constraint firstItem="Jdw-XO-I5N" firstAttribute="leading" secondItem="Isq-HH-oaG" secondAttribute="leading" id="l6j-IX-dQl"/>
+                            <constraint firstItem="Isq-HH-oaG" firstAttribute="trailing" secondItem="Jdw-XO-I5N" secondAttribute="trailing" id="wKR-ef-baE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HBj-TM-Yrj"/>
+                    <connections>
+                        <outlet property="fetchDataTableview" destination="Jdw-XO-I5N" id="CD3-MO-LVC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wR-WN-I4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="-668"/>
         </scene>
         <!--User Details View Controller-->
         <scene sceneID="wLB-6Q-goN">
@@ -87,6 +124,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qyv-dG-Pwg">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
