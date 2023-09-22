@@ -10,5 +10,6 @@ struct URLConstant {
     static let baseUrl = URL(string: "https://jsonplaceholder.typicode.com/users/")
     static let postUrl =  URL(string: "https://jsonplaceholder.typicode.com/posts")
     static let userDetailsUrl =  URL(string: "\(String(describing: baseUrl))")
-    static let userProfile = URL(string: "https://xsgames.co/randomusers/avatar.php?g=male")
+    static let user_id = 1
+    static let userProfile = URL(string: "https://xsgames.co/randomusers/assets/avatars/male/\(user_id).jpg")
 }

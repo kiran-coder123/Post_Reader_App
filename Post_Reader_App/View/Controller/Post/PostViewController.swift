@@ -27,8 +27,16 @@ class PostViewController: UIViewController {
         DispatchQueue.main.async {
             self.fetchPosts()
         }
-        
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+           postTableview.addSubview(refreshControl)
        
+     }
+    
+    
+    @objc func refresh(_ sender: AnyObject) {
+        refreshControl.endRefreshing()
+        fetchPosts()
+        postTableview.reloadData()
      }
     
     func checkInternetConnection(){

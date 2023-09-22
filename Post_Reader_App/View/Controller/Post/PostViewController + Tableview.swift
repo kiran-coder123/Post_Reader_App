@@ -21,7 +21,8 @@ extension PostViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = postTableview.dequeReusableCell(PostsTableViewCell.self) else {return UITableViewCell()}
         let post = postViewModel.posts[indexPath.row]
-        cell.loadRandomImage()
+        let photoId = Int(post.userId ?? 1) + Int(post.id ?? 1)
+        cell.loadRandomImage(userId: photoId)
         cell.userIdLabel.text = "UserID: \(post.userId ?? 0 )"
         cell.idLabel.text = "ID: \(post.id ?? 0)"
         cell.titleLabel.text = "Tilte:\t \(post.title ?? " ")"

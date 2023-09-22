@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+import SDWebImage
 
 class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var userProfileImageview: UIImageView!
@@ -21,8 +21,6 @@ class PostsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        loadRandomImage()
         setupImageview()
         setupView()
     }
@@ -38,28 +36,22 @@ class PostsTableViewCell: UITableViewCell {
         
     }
     
-      func loadRandomImage() {
-        //  let url = URLConstant.userProfile
-        //  userProfileImageview.kf.setImage(with: url)
-          
-          
-          
-          
-          
-          
-          guard let url = URLConstant.userProfile else { return }
-//          userProfileImageview.sd_setImage(with: url)
-//          
+    func loadRandomImage(userId: Int) {
+        let userProfile = URL(string: "https://xsgames.co/randomusers/assets/avatars/male/\(userId).jpg")
+
+        guard let url = userProfile else { return }
+         userProfileImageview.sd_setImage(with: url)
 //
-          URLSession.shared.dataTask(with: url) { data, response, error in
-              if let data = data, let image = UIImage(data: data) {
-                  DispatchQueue.main.async {
-                    
-               //   self.userProfileImageview.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
-                     self.userProfileImageview.image = image
-                  }
-              }
-          }.resume()
+//
+//          URLSession.shared.dataTask(with: url) { data, response, error in
+//              if let data = data, let image = UIImage(data: data) {
+//                  DispatchQueue.main.async {
+//                    
+//               //   self.userProfileImageview.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder.png"))
+//                     self.userProfileImageview.image = image
+//                  }
+//              }
+//          }.resume()
     }
     
 }
